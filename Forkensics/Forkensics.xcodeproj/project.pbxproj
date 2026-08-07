@@ -1,0 +1,474 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA0301010000000000000000 /* ForkensicsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300010000000000000000 /* ForkensicsApp.swift */; };
+		AA0301020000000000000000 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300020000000000000000 /* ContentView.swift */; };
+		AA0301030000000000000000 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300030000000000000000 /* Player.swift */; };
+		AA0301040000000000000000 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300040000000000000000 /* Challenge.swift */; };
+		AA0301050000000000000000 /* ChallengeSecret.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300050000000000000000 /* ChallengeSecret.swift */; };
+		AA0301060000000000000000 /* GuessAttempt.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300060000000000000000 /* GuessAttempt.swift */; };
+		AA0301070000000000000000 /* Hint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300070000000000000000 /* Hint.swift */; };
+		AA0301080000000000000000 /* ScoreEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300080000000000000000 /* ScoreEvent.swift */; };
+		AA0301090000000000000000 /* PostRevealContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300090000000000000000 /* PostRevealContent.swift */; };
+		AA03010A0000000000000000 /* DataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03000A0000000000000000 /* DataServiceProtocol.swift */; };
+		AA03010B0000000000000000 /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03000B0000000000000000 /* MockDataService.swift */; };
+		AA03010C0000000000000000 /* ChallengeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03000C0000000000000000 /* ChallengeImageView.swift */; };
+		AA03010D0000000000000000 /* ChallengeFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03000D0000000000000000 /* ChallengeFeedView.swift */; };
+		AA03010E0000000000000000 /* ChallengeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03000E0000000000000000 /* ChallengeRowView.swift */; };
+		AA03010F0000000000000000 /* ChallengeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03000F0000000000000000 /* ChallengeDetailView.swift */; };
+		AA0301100000000000000000 /* GuessEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300100000000000000000 /* GuessEntryView.swift */; };
+		AA0301110000000000000000 /* PosterControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300110000000000000000 /* PosterControlsView.swift */; };
+		AA0301120000000000000000 /* CreateChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300120000000000000000 /* CreateChallengeView.swift */; };
+		AA0301130000000000000000 /* RevealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300130000000000000000 /* RevealView.swift */; };
+		AA0301140000000000000000 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300140000000000000000 /* ConversationView.swift */; };
+		AA0301150000000000000000 /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300150000000000000000 /* LeaderboardView.swift */; };
+		AA0301160000000000000000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0300160000000000000000 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AA0200020000000000000000 /* Forkensics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forkensics.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0300010000000000000000 /* ForkensicsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkensicsApp.swift; sourceTree = "<group>"; };
+		AA0300020000000000000000 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AA0300030000000000000000 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		AA0300040000000000000000 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		AA0300050000000000000000 /* ChallengeSecret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeSecret.swift; sourceTree = "<group>"; };
+		AA0300060000000000000000 /* GuessAttempt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessAttempt.swift; sourceTree = "<group>"; };
+		AA0300070000000000000000 /* Hint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hint.swift; sourceTree = "<group>"; };
+		AA0300080000000000000000 /* ScoreEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreEvent.swift; sourceTree = "<group>"; };
+		AA0300090000000000000000 /* PostRevealContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRevealContent.swift; sourceTree = "<group>"; };
+		AA03000A0000000000000000 /* DataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceProtocol.swift; sourceTree = "<group>"; };
+		AA03000B0000000000000000 /* MockDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataService.swift; sourceTree = "<group>"; };
+		AA03000C0000000000000000 /* ChallengeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeImageView.swift; sourceTree = "<group>"; };
+		AA03000D0000000000000000 /* ChallengeFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeFeedView.swift; sourceTree = "<group>"; };
+		AA03000E0000000000000000 /* ChallengeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeRowView.swift; sourceTree = "<group>"; };
+		AA03000F0000000000000000 /* ChallengeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailView.swift; sourceTree = "<group>"; };
+		AA0300100000000000000000 /* GuessEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessEntryView.swift; sourceTree = "<group>"; };
+		AA0300110000000000000000 /* PosterControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterControlsView.swift; sourceTree = "<group>"; };
+		AA0300120000000000000000 /* CreateChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeView.swift; sourceTree = "<group>"; };
+		AA0300130000000000000000 /* RevealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevealView.swift; sourceTree = "<group>"; };
+		AA0300140000000000000000 /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
+		AA0300150000000000000000 /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
+		AA0300160000000000000000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA0500020000000000000000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA0400010000000000000000 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA0200020000000000000000 /* Forkensics.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA0400020000000000000000 /* Forkensics */ = {
+			isa = PBXGroup;
+			children = (
+				AA0300010000000000000000 /* ForkensicsApp.swift */,
+				AA0300020000000000000000 /* ContentView.swift */,
+				AA0400030000000000000000 /* Models */,
+				AA0400040000000000000000 /* Services */,
+				AA0400050000000000000000 /* Views */,
+				AA0300160000000000000000 /* Assets.xcassets */,
+				AA0400010000000000000000 /* Products */,
+			);
+			path = Forkensics;
+			sourceTree = "<group>";
+		};
+		AA0400030000000000000000 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA0300030000000000000000 /* Player.swift */,
+				AA0300040000000000000000 /* Challenge.swift */,
+				AA0300050000000000000000 /* ChallengeSecret.swift */,
+				AA0300060000000000000000 /* GuessAttempt.swift */,
+				AA0300070000000000000000 /* Hint.swift */,
+				AA0300080000000000000000 /* ScoreEvent.swift */,
+				AA0300090000000000000000 /* PostRevealContent.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AA0400040000000000000000 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AA03000A0000000000000000 /* DataServiceProtocol.swift */,
+				AA03000B0000000000000000 /* MockDataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AA0400050000000000000000 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AA0400060000000000000000 /* Components */,
+				AA0400070000000000000000 /* Feed */,
+				AA0400080000000000000000 /* Challenge */,
+				AA0400090000000000000000 /* Reveal */,
+				AA04000A0000000000000000 /* Conversation */,
+				AA04000B0000000000000000 /* Leaderboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AA0400060000000000000000 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AA03000C0000000000000000 /* ChallengeImageView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		AA0400070000000000000000 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				AA03000D0000000000000000 /* ChallengeFeedView.swift */,
+				AA03000E0000000000000000 /* ChallengeRowView.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		AA0400080000000000000000 /* Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				AA03000F0000000000000000 /* ChallengeDetailView.swift */,
+				AA0300100000000000000000 /* GuessEntryView.swift */,
+				AA0300110000000000000000 /* PosterControlsView.swift */,
+				AA0300120000000000000000 /* CreateChallengeView.swift */,
+			);
+			path = Challenge;
+			sourceTree = "<group>";
+		};
+		AA0400090000000000000000 /* Reveal */ = {
+			isa = PBXGroup;
+			children = (
+				AA0300130000000000000000 /* RevealView.swift */,
+			);
+			path = Reveal;
+			sourceTree = "<group>";
+		};
+		AA04000A0000000000000000 /* Conversation */ = {
+			isa = PBXGroup;
+			children = (
+				AA0300140000000000000000 /* ConversationView.swift */,
+			);
+			path = Conversation;
+			sourceTree = "<group>";
+		};
+		AA04000B0000000000000000 /* Leaderboard */ = {
+			isa = PBXGroup;
+			children = (
+				AA0300150000000000000000 /* LeaderboardView.swift */,
+			);
+			path = Leaderboard;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA0200010000000000000000 /* Forkensics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA0601020000000000000000 /* Build configuration list for PBXNativeTarget "Forkensics" */;
+			buildPhases = (
+				AA0500010000000000000000 /* Sources */,
+				AA0500020000000000000000 /* Frameworks */,
+				AA0500030000000000000000 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Forkensics;
+			productName = Forkensics;
+			productReference = AA0200020000000000000000 /* Forkensics.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA0100010000000000000000 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					AA0200010000000000000000 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = AA0601010000000000000000 /* Build configuration list for PBXProject "Forkensics" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA0400020000000000000000;
+			productRefGroup = AA0400010000000000000000 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA0200010000000000000000 /* Forkensics */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA0500030000000000000000 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0301160000000000000000 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA0500010000000000000000 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0301010000000000000000 /* ForkensicsApp.swift in Sources */,
+				AA0301020000000000000000 /* ContentView.swift in Sources */,
+				AA0301030000000000000000 /* Player.swift in Sources */,
+				AA0301040000000000000000 /* Challenge.swift in Sources */,
+				AA0301050000000000000000 /* ChallengeSecret.swift in Sources */,
+				AA0301060000000000000000 /* GuessAttempt.swift in Sources */,
+				AA0301070000000000000000 /* Hint.swift in Sources */,
+				AA0301080000000000000000 /* ScoreEvent.swift in Sources */,
+				AA0301090000000000000000 /* PostRevealContent.swift in Sources */,
+				AA03010A0000000000000000 /* DataServiceProtocol.swift in Sources */,
+				AA03010B0000000000000000 /* MockDataService.swift in Sources */,
+				AA03010C0000000000000000 /* ChallengeImageView.swift in Sources */,
+				AA03010D0000000000000000 /* ChallengeFeedView.swift in Sources */,
+				AA03010E0000000000000000 /* ChallengeRowView.swift in Sources */,
+				AA03010F0000000000000000 /* ChallengeDetailView.swift in Sources */,
+				AA0301100000000000000000 /* GuessEntryView.swift in Sources */,
+				AA0301110000000000000000 /* PosterControlsView.swift in Sources */,
+				AA0301120000000000000000 /* CreateChallengeView.swift in Sources */,
+				AA0301130000000000000000 /* RevealView.swift in Sources */,
+				AA0301140000000000000000 /* ConversationView.swift in Sources */,
+				AA0301150000000000000000 /* LeaderboardView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AA0600010000000000000000 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AA0600020000000000000000 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA0600030000000000000000 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.forkensics.prototype";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		AA0600040000000000000000 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.forkensics.prototype";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA0601010000000000000000 /* Build configuration list for PBXProject "Forkensics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0600010000000000000000 /* Debug */,
+				AA0600020000000000000000 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA0601020000000000000000 /* Build configuration list for PBXNativeTarget "Forkensics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0600030000000000000000 /* Debug */,
+				AA0600040000000000000000 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = AA0100010000000000000000 /* Project object */;
+}

@@ -1,0 +1,24 @@
+# Supabase local state — never commit
+supabase/.temp/
+supabase/.branches/
+
+# Environment and credentials — never commit
+.env
+.env.*
+*.env
+*.pem
+*.key
+secrets/
+
+# macOS
+.DS_Store
+
+# Xcode user state
+*.xcuserstate
+xcuserdata/
+*.xccheckout
+*.moved-to-trash/
+DerivedData/
+
+# Logs
+*.log
