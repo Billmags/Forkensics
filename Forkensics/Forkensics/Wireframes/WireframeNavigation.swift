@@ -105,10 +105,12 @@ struct ForkensicsRootWireframe: View {
 }
 
 struct ForkensicsMainShell: View {
+    @EnvironmentObject private var authService: AuthService
     @State private var selection: ForkensicsTab = .cases
     @State private var path: [WireframeRoute] = []
     @StateObject private var challengeStore = WireframeChallengeStore()
     @StateObject private var tableStore = WireframeTableStore()
+    @StateObject private var challengeService = ChallengeService()
 
     var body: some View {
         NavigationStack(path: $path) {
@@ -127,6 +129,12 @@ struct ForkensicsMainShell: View {
         }
         .toolbar(.hidden, for: .navigationBar)
         .tint(ForkensicsColor.orange)
+        .task {
+            await refreshFromSupabase()
+        }
+        .onChange(of: challengeService.cases) { _, newCases in
+            challengeStore.loadFromSupabase(newCases)
+        }
         .onReceive(NotificationCenter.default.publisher(for: .forkensicsOpenCase)) { notification in
             guard let caseID = notification.userInfo?[ForkensicsNotificationKeys.caseID] as? String else {
                 return
@@ -435,6 +443,14 @@ struct ForkensicsMainShell: View {
                 MissingTableWireframe(close: { _ = path.popLast() })
             }
         }
+    }
+
+    // MARK: - Supabase feed refresh
+
+    private func refreshFromSupabase() async {
+        guard let session = authService.session else { return }
+        challengeStore.setSupabaseUserID(session.user.id.uuidString)
+        await challengeService.fetch(using: authService.client)
     }
 
     private func showLockedIn() {

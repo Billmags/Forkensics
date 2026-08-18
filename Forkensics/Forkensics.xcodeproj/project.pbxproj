@@ -43,6 +43,7 @@
 		AA03011F0000000000000000 /* GameRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03001F0000000000000000 /* GameRules.swift */; };
 		AA0301200000000000000000 /* LocalMultiplayerWireframes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300200000000000000000 /* LocalMultiplayerWireframes.swift */; };
 		AA0301210000000000000000 /* ForkensicsNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300210000000000000000 /* ForkensicsNotificationService.swift */; };
+		AA0301220000000000000000 /* ChallengeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300220000000000000000 /* ChallengeService.swift */; };
 		BB0300010000000000000000 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0200010000000000000000 /* NotificationViewController.swift */; };
 		BB0300020000000000000000 /* ForkensicsNotificationContent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BB0100010000000000000000 /* ForkensicsNotificationContent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CC0300010000000000000000 /* ForkensicsLiveActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0200030000000000000000 /* ForkensicsLiveActivityAttributes.swift */; };
@@ -122,6 +123,7 @@
 		AA03001F0000000000000000 /* GameRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRules.swift; sourceTree = "<group>"; };
 		AA0300200000000000000000 /* LocalMultiplayerWireframes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalMultiplayerWireframes.swift; sourceTree = "<group>"; };
 		AA0300210000000000000000 /* ForkensicsNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkensicsNotificationService.swift; sourceTree = "<group>"; };
+		AA0300220000000000000000 /* ChallengeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeService.swift; sourceTree = "<group>"; };
 		BB0100010000000000000000 /* ForkensicsNotificationContent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ForkensicsNotificationContent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB0200010000000000000000 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		BB0200020000000000000000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				AA03001F0000000000000000 /* GameRules.swift */,
 				AA03000B0000000000000000 /* MockDataService.swift */,
 				AA0300210000000000000000 /* ForkensicsNotificationService.swift */,
+				AA0300220000000000000000 /* ChallengeService.swift */,
 				CC0200030000000000000000 /* ForkensicsLiveActivityAttributes.swift */,
 				CC0200040000000000000000 /* ForkensicsLiveActivityService.swift */,
 			);
@@ -457,6 +460,7 @@
 				AA03011E0000000000000000 /* PreviewGallery.swift in Sources */,
 				AA0301200000000000000000 /* LocalMultiplayerWireframes.swift in Sources */,
 				AA0301210000000000000000 /* ForkensicsNotificationService.swift in Sources */,
+				AA0301220000000000000000 /* ChallengeService.swift in Sources */,
 				CC0300010000000000000000 /* ForkensicsLiveActivityAttributes.swift in Sources */,
 				CC0300030000000000000000 /* ForkensicsLiveActivityService.swift in Sources */,
 				AA0301030000000000000000 /* Player.swift in Sources */,

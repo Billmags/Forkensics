@@ -494,6 +494,11 @@ final class WireframeChallengeStore: ObservableObject {
     @Published private(set) var currentPlayerID: String
     @Published private(set) var persistenceError: String?
 
+    /// The authenticated user's real Supabase UUID (set after sign-in).
+    /// Used alongside currentPlayerID to correctly identify the poster
+    /// when cases come from the Supabase backend.
+    private var supabaseUserID: String?
+
     private let storeURL: URL?
     private let activityURL: URL?
     private let defaults: UserDefaults
@@ -541,6 +546,22 @@ final class WireframeChallengeStore: ObservableObject {
         defaults.set(playerID, forKey: Self.currentPlayerKey)
     }
 
+    // MARK: - Supabase integration
+
+    /// Stores the authenticated user's real Supabase UUID.
+    /// Call this once after sign-in so poster comparisons work for server-fetched cases.
+    func setSupabaseUserID(_ id: String) {
+        supabaseUserID = id
+    }
+
+    /// Replaces the in-memory case list with server-fetched cases from Supabase.
+    /// The local disk store is NOT rewritten — on next cold launch this will be
+    /// called again from the Supabase fetch, so disk persistence is a warm cache only.
+    /// Activities (guesses, messages, clue usage) are preserved across loads.
+    func loadFromSupabase(_ serverCases: [WireframePostedCase]) {
+        postedCases = serverCases
+    }
+
     func add(_ postedCase: WireframePostedCase) {
         postedCases.insert(postedCase, at: 0)
         save()
@@ -548,6 +569,7 @@ final class WireframeChallengeStore: ObservableObject {
 
     func postedByCurrentPlayer(_ item: WireframePostedCase) -> Bool {
         item.posterPlayerID == currentPlayerID
+            || (supabaseUserID.map { item.posterPlayerID == $0 } ?? false)
     }
 
     func isAvailableToCurrentPlayer(_ item: WireframePostedCase) -> Bool {
