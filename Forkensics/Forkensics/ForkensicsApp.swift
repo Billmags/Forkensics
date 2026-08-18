@@ -2,12 +2,13 @@ import SwiftUI
 
 @main
 struct ForkensicsApp: App {
-    @StateObject private var dataService = MockDataService()
+    @UIApplicationDelegateAdaptor(ForkensicsAppDelegate.self) private var appDelegate
+    @StateObject private var authService = AuthService()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(dataService)
+                .environmentObject(authService)
         }
     }
 }

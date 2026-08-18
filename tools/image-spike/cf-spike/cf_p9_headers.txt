@@ -1,0 +1,13 @@
+HTTP/2 200 
+date: Sun, 16 Aug 2026 11:40:47 GMT
+content-type: image/webp
+content-length: 7300
+x-forkensics-display-key: display/fixture-exif.jpg.webp
+x-forkensics-sha256: a885bf002d122800fa52bf518aaca613b0d04846872f0371db9bc6146b3f8326
+x-forkensics-size: 7300
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=wbyq49bF%2FiCN0vg%2BfyYyr4%2FJ%2FFJlo%2BJcx8rEJW1gmbxUdUHBn7j5xdlZVbUvyyRqO%2B2eXBrpGenJMBTNzfKlh3yJhjlmm6%2By1k%2BsIvsU435kr62%2FBnIp2jAaobCzfFPXORqixoOidrUXk0E%2Bo2KebppPNkQvwDk3Ueu9lnkb"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-ray: a2c02a8b99a57448-MIA
+alt-svc: h3=":443"; ma=86400
+

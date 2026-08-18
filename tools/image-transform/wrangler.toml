@@ -1,0 +1,22 @@
+# tools/image-transform/wrangler.toml
+name            = "forkensics-image-transform-dev"
+main            = "src/index.ts"
+compatibility_date = "2026-08-15"
+
+[images]
+binding = "IMAGES"
+
+[[r2_buckets]]
+binding     = "BUCKET"
+bucket_name = "forkensics-dev-media"
+
+# ── Production environment (Phase 3 — not authorized by this proposal) ────────
+[env.production]
+name = "forkensics-image-transform"
+
+[env.production.images]
+binding = "IMAGES"
+
+[[env.production.r2_buckets]]
+binding     = "BUCKET"
+bucket_name = "forkensics-prod-media"

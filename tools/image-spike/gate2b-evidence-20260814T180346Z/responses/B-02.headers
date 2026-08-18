@@ -1,0 +1,19 @@
+HTTP/2 401 
+date: Fri, 14 Aug 2026 18:06:40 GMT
+content-type: application/json
+cf-ray: a2b1e5097a730c83-MIA
+cf-cache-status: DYNAMIC
+access-control-allow-origin: *
+set-cookie: __cf_bm=ue1mUDIy5.sNXJ_Eq1RZgh8seMAX.eIyJw73_LlA1rc-1786730799.590668-1.0.1.1-RTuvJcsBXjfmkUeU.xy.ON3KeH7Xwq0hQk0MAl2BUPG0ZeVa8dBWNp3sGtfZpO6JA_PTh4Dnhv8FIkUYlXUxe7YKYrr7rIaTx3iiK1iwK8EI5CI6NVOfBxI64BXLsm6s; HttpOnly; SameSite=None; Secure; Path=/; Domain=supabase.co; Expires=Fri, 14 Aug 2026 18:36:40 GMT
+server: cloudflare
+vary: Accept-Encoding
+access-control-allow-headers: authorization, x-client-info, apikey
+sb-error-code: UNAUTHORIZED_INVALID_JWT_FORMAT
+sb-gateway-version: 1
+sb-project-ref: torkgydbvktqebssfpdi
+sb-request-id: 01a00174-62cd-7896-b548-bfe5167b5e77
+x-sb-edge-region: us-east-1
+x-served-by: supabase-edge-runtime
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+alt-svc: h3=":443"; ma=86400
+

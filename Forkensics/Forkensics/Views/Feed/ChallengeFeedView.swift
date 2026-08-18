@@ -49,7 +49,9 @@ struct ChallengeFeedView: View {
     }
 }
 
-#Preview {
-    ChallengeFeedView()
-        .environmentObject(MockDataService())
+struct ChallengeFeedView_Previews: PreviewProvider {
+    static var previews: some View {
+        ChallengeFeedView()
+            .environmentObject(MockDataService())
+    }
 }

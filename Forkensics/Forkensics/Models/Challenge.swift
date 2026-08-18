@@ -32,6 +32,8 @@ struct Challenge: Identifiable {
     let postedAt: Date
     let deadlineAt: Date
     var state: ChallengeState
+    /// Freezes point values so future scoring changes affect only new challenges.
+    let rulesVersion: String = ScoringRules.currentVersion
     /// Optional story shown only after reveal.
     var story: String?
     /// Set when poster withdraws after first guess was received.

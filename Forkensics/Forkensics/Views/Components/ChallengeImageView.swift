@@ -93,11 +93,13 @@ struct StateBadge: View {
     }
 }
 
-#Preview {
-    HStack(spacing: 20) {
-        ChallengeImageView(colorName: "orange", size: 80)
-        ChallengeImageView(colorName: "blue", size: 80)
-        ChallengeImageView(colorName: "pink", size: 80)
+struct ChallengeImageView_Previews: PreviewProvider {
+    static var previews: some View {
+        HStack(spacing: 20) {
+            ChallengeImageView(colorName: "orange", size: 80)
+            ChallengeImageView(colorName: "blue", size: 80)
+            ChallengeImageView(colorName: "pink", size: 80)
+        }
+        .padding()
     }
-    .padding()
 }

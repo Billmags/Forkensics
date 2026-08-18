@@ -12,4 +12,6 @@ struct ChallengeSecret {
     var canonicalCity: String
     /// True once any eligible player has submitted a guess. Locks poster editing.
     var hasFirstGuess: Bool
+    /// Freezes answer behavior so future matching changes do not rewrite history.
+    var answerMatcherVersion: String = AnswerMatcher.currentVersion
 }

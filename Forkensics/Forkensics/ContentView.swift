@@ -2,21 +2,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TabView {
-            ChallengeFeedView()
-                .tabItem {
-                    Label("Feed", systemImage: "house.fill")
-                }
-
-            LeaderboardView()
-                .tabItem {
-                    Label("Standings", systemImage: "trophy.fill")
-                }
-        }
+        ForkensicsRootWireframe()
     }
 }
 
-#Preview {
-    ContentView()
-        .environmentObject(MockDataService())
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }

@@ -259,33 +259,33 @@ final class MockDataService: ObservableObject, DataServiceProtocol {
     // MARK: - Text Normalization
 
     func normalize(_ text: String) -> String {
-        var s = text.lowercased()
-        s = s.replacingOccurrences(of: "'", with: "")
-        s = s.replacingOccurrences(of: "\"", with: "")
-        s = s.replacingOccurrences(of: "-", with: " ")
-        s = s.components(separatedBy: CharacterSet.punctuationCharacters).joined(separator: " ")
-        return s.components(separatedBy: .whitespaces)
-            .filter { !$0.isEmpty }
-            .joined(separator: " ")
+        AnswerMatcher.normalize(text)
     }
 
     func isWhatCorrect(guess: String, secret: ChallengeSecret) -> Bool {
-        let n = normalize(guess)
-        if n == normalize(secret.canonicalDish) { return true }
-        return secret.dishAliases.contains { normalize($0) == n }
+        AnswerMatcher.matchesDish(
+            guess: guess,
+            canonical: secret.canonicalDish,
+            aliases: secret.dishAliases,
+            version: secret.answerMatcherVersion
+        )
     }
 
     func isWhereCorrect(restaurant: String, city: String, secret: ChallengeSecret) -> Bool {
-        normalize(restaurant) == normalize(secret.canonicalRestaurant) &&
-        normalize(city) == normalize(secret.canonicalCity)
+        _ = city
+        return AnswerMatcher.matchesRestaurant(
+            guess: restaurant,
+            canonical: secret.canonicalRestaurant,
+            version: secret.answerMatcherVersion
+        )
     }
 
     // MARK: - Scoring
 
     private func computeScoreEvents(for challengeId: UUID, secret: ChallengeSecret) -> [ScoreEvent] {
         let active = activeEligibles(for: challengeId)
-        let effectiveCount = active.count
-        guard effectiveCount > 0 else { return [] }
+        guard !active.isEmpty,
+              let challenge = challenge(for: challengeId) else { return [] }
         let eligibleIds = Set(active.map { $0.playerId })
         let attempts = guessAttemptsByChallenge[challengeId] ?? []
         var events: [ScoreEvent] = []
@@ -322,13 +322,16 @@ final class MockDataService: ObservableObject, DataServiceProtocol {
                       firstCorrects[j + 1].seq == firstCorrects[i].seq {
                     j += 1
                 }
-                let points = max(1, effectiveCount - rank + 1)
+                let points = ScoringRules.points(
+                    forRank: rank,
+                    version: challenge.rulesVersion
+                )
                 for k in i...j {
                     events.append(ScoreEvent(
                         id: UUID(), challengeId: challengeId,
                         playerId: firstCorrects[k].playerId, race: race,
                         points: points, rank: rank,
-                        rulesVersion: "1.0", calculatedAt: Date()
+                        rulesVersion: challenge.rulesVersion, calculatedAt: Date()
                     ))
                 }
                 rank += (j - i + 1)

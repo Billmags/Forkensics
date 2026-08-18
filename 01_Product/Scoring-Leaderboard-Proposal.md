@@ -1,5 +1,5 @@
 # FORKENSICS — SCORING AND LEADERBOARD PROPOSAL
-**Status: Pending Bill–Claude–Codex Approval**
+**Status: Scoring values confirmed by Bill on 2026-08-15**
 
 ---
 
@@ -32,15 +32,14 @@ Recommended points for each race:
 
 | Finish | Points |
 |--------|--------|
-| 1st correct | 5 points |
-| 2nd correct | 4 points |
-| 3rd correct | 3 points |
-| 4th correct | 2 points |
-| 5th and later correct | 1 point |
+| 1st correct | 100 points |
+| 2nd correct | 80 points |
+| 3rd correct | 60 points |
+| 4th and later correct | 0 points |
 | Incorrect answer | 0 points |
 | No answer | 0 points |
 
-A player can earn a maximum of **10 points per mystery**.
+A player can earn a maximum of **200 points per mystery before clue deductions**.
 
 The first correct player wins that race.
 
@@ -65,7 +64,7 @@ Example:
 - Winning in a 20-person group could award 20 points even if only two people actually played.
 - Winning in a five-person group would award only five points.
 
-Fixed 5–4–3–2–1 scoring makes every mystery worth the same amount regardless of:
+Fixed 100–80–60 scoring makes every mystery worth the same amount regardless of:
 
 - Group size
 - Number of eligible players
@@ -205,15 +204,10 @@ The application can celebrate co-leaders.
 
 ## CLUES
 
-Clue penalties should not be added until the complete clue system is approved.
-
-For V1, the simplest approach is:
-
-- Clues reveal information gradually
-- Players still rank according to when they submit the first correct answer
-- No complicated multipliers or hidden scoring formulas
-
-If on-demand clues are later judged too advantageous, a simple one-point deduction can be considered in a future rules version.
+- Each clue a player reveals deducts **40 points** from that player's combined case score.
+- Clue use does not change the player's correct-answer rank or server receipt time.
+- The combined case score floors at zero after clue deductions and can never be negative.
+- Each activated challenge stores its scoring RulesVersion so future ladders can change without rewriting historical results.
 
 ---
 
@@ -248,8 +242,9 @@ The leaderboard must not resemble a business dashboard.
 **Approve:**
 
 - Two independent races: Dish and Place
-- Fixed 5–4–3–2–1 scoring for each race
-- Maximum of 10 points per mystery
+- Fixed 100–80–60 scoring for each race; fourth and later receive zero
+- Maximum of 200 points per mystery before clue deductions
+- A 40-point deduction for each clue used
 - Case Sweep recognition for winning both races
 - Monthly group leaderboard as the default
 - All-time Hall of Fame as the secondary leaderboard

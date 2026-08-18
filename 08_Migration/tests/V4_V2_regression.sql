@@ -153,8 +153,8 @@ DECLARE
   v_orig text;
   v_disp text;
 BEGIN
-  v_orig := 'cases/' || p_case_id::text || '/originals/' || v_sid::text;
-  v_disp := 'cases/' || p_case_id::text || '/displays/'  || v_sid::text || '.webp';
+  v_orig := 'originals/' || v_sid::text;
+  v_disp := 'display/'   || v_sid::text || '.webp';
   INSERT INTO private.upload_sessions (
     session_id, upload_token_hash, case_id, uploader_id,
     original_storage_path, display_storage_path,
@@ -471,13 +471,13 @@ BEGIN
   FROM public.reserve_upload_session(v_cid, v_uid,
     test_helpers.make_token_hash('happy'), 'image/jpeg', 1048576, now()+interval '10 minutes') r;
   PERFORM test_helpers.assert(v_sid IS NOT NULL, '3.6a: reserve returns session_id');
-  -- V4: 'cases/' prefix (V2 used 'challenges/')
+  -- V5: flat paths — 'originals/{session_id}' and 'display/{session_id}.webp'
   PERFORM test_helpers.assert(
-    v_orig = 'cases/' || v_cid::text || '/originals/' || v_sid::text,
-    '3.6b: original_storage_path format correct (V4: cases/ prefix)');
+    v_orig = 'originals/' || v_sid::text,
+    '3.6b: original_storage_path format correct (V5: flat originals/ prefix)');
   PERFORM test_helpers.assert(
-    v_disp = 'cases/' || v_cid::text || '/displays/' || v_sid::text || '.webp',
-    '3.6c: display_storage_path format correct (V4: cases/ prefix)');
+    v_disp = 'display/' || v_sid::text || '.webp',
+    '3.6c: display_storage_path format correct (V5: flat display/ prefix)');
   PERFORM test_helpers.assert(
     EXISTS(SELECT 1 FROM private.upload_sessions
            WHERE session_id=v_sid AND status='pending' AND storage_upload_expires_at IS NULL),

@@ -7,7 +7,7 @@
 3. **Guess editing** — Yes, editable until round locks. ✓
 4. **Where? definition** — Venue name + city (both required, both free-text, no partial credit). Map pin deferred to V2. ✓
 5. **What? precision** — Must identify the actual dish. Poster supplies canonical name, accepted alternates, and optional spelling variants. Poster resolves disputes. ✓
-6. **Hints** — Allowed, poster-written, broadcast to all eligible players equally. No point penalty. ✓
+6. **Clues** — Private to the requesting eligible player. Each revealed clue deducts 40 points from that player's combined case score. Other detectives and the poster cannot see the request or clue before reveal. ✓ (superseded 2026-08-15)
 7. **Poster scoring** — Poster is excluded from scoring on their own challenge. ✓
 8. **Food vs. location weight** — Equal weight. Separate races. ✓
 9. **Location scoring** — Binary: venue name correct + city correct. Map distance scoring deferred to V2. ✓
@@ -27,6 +27,13 @@
 23. **Pricing** — Free for the family pilot. Monetization undecided and excluded from V1 architecture. ✓
 24. **Family pilot distribution** — TestFlight. ✓
 
+## Resolved — 2026-08-18
+
+25. **iOS deployment target** — iOS 18.0 minimum, iPhone only, portrait-only for initial release. Landscape is unsupported. ✓
+26. **City/location scoring** — City is optional display and discovery context only. It is never part of answer matching or scoring. Older planning documents that treat city as scored are superseded; historical records are preserved as superseded rather than silently rewritten. ✓
+27. **Lock In behavior** — Lock In is irreversible after a clear confirmation prompt. Detectives may edit freely until they confirm. Once locked, that detective immediately gains access to Table Talk; other detectives cannot see their answers. The deadline automatically locks or closes any unfinished guesses per existing game rules. ✓
+28. **Clue vs hint terminology** — Use "Clues" consistently in all user-facing copy. Do not rename existing backend columns; map backend field names to "Clues" in the Swift/domain layer unless a separately reviewed migration is genuinely necessary. ✓
+
 ## Still Open
 
 - **Minimum guessers before poster can force-reveal** — Confirmed as 2. Does this mean 2 total submissions or 2 correct submissions? Assumed: 2 total submissions regardless of correctness. Needs explicit confirmation.
@@ -34,9 +41,17 @@
 - **Pilot device inventory** — Required before implementation begins. iPhone models and iOS versions in use by family pilot participants.
 - **Group deletion** — What happens to challenges and scores when a group is deleted?
 
+### Pre-V4 Schema Decisions (must resolve before V4 migration is written)
+
+- **Invite pause during active challenge** — Currently `eligible_participants` snapshots at activation, but group invite tokens remain valid. A late joiner can still join the group, see the active challenge (as a group member), and place a guess. Decision needed: should `activate_challenge` pause the group's active invite token (setting e.g. `paused = true`) and unpause it on challenge expiry/cancellation? Or should a different mechanism prevent late joiners from participating mid-game? This also interacts with whether a non-eligible group member can place a `guess_attempt` at all (current triggers check group membership, not `eligible_participants`).
+
+- **Per-player private clues — schema** — Approved behavior: clues are private, optional, and per-player. Poster enters one optional clue per race at challenge creation. A player who requests a clue sees it only for themselves; other players and the poster cannot see the request or clue before reveal. The server records the request before revealing the clue and locks the confirmed 40-point deduction server-side. One clue per race in V1. Two schema decisions required:
+  1. **Clue text storage**: Add a `race` column (`'what'|'where'`) to the existing `clues` table with a UNIQUE constraint on `(challenge_id, race)` — one clue per race per challenge — OR move clue text directly onto `challenges` as `dish_clue_text text` and `restaurant_clue_text text` nullable columns. The `clues` table approach is more normalized; the `challenges` columns approach is simpler for V1.
+  2. **Penalty storage**: Add a `clue_requests` table with `(challenge_id, player_id, race)` UNIQUE constraint. The confirmed -40 point deduction is either a stored integer column (flexible if penalty becomes configurable later) or derived from the recorded RulesVersion. Stored integer recommended. RLS: players see only their own rows. Button suppressed client-side when no clue exists for that race.
+
+
 ## Resolved — 2026-08-05 (GPT Reconciliation)
 
 - **Score correction after reveal** — Poster or admin submits correction with mandatory reason. Original records immutable. Scores recalculated using recorded RulesVersion. CorrectionEvent visible in challenge activity. Affected players notified. ✓
 - **Account deletion** — Player becomes "Former Player." Historical data retained without identity. Active guessing rounds treated as withdrawal. Active posted challenges cancelled. Sole admin: transfer to longest-tenured member or archive group. ✓
 - **Auto-close timing** — Poster selects 1–48 hours at posting. Default is 2 hours. ✓
-

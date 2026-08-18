@@ -159,7 +159,9 @@ struct CreateChallengeView: View {
     }
 }
 
-#Preview {
-    CreateChallengeView()
-        .environmentObject(MockDataService())
+struct CreateChallengeView_Previews: PreviewProvider {
+    static var previews: some View {
+        CreateChallengeView()
+            .environmentObject(MockDataService())
+    }
 }

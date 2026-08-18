@@ -100,7 +100,9 @@ struct LeaderboardRowView: View {
     }
 }
 
-#Preview {
-    LeaderboardView()
-        .environmentObject(MockDataService())
+struct LeaderboardView_Previews: PreviewProvider {
+    static var previews: some View {
+        LeaderboardView()
+            .environmentObject(MockDataService())
+    }
 }

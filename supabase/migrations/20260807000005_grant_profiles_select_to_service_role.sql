@@ -1,0 +1,11 @@
+-- 20260807000005_grant_profiles_select_to_service_role.sql
+-- Grants service_role SELECT on public.profiles.
+-- The upload-authorize Edge Function reads public.profiles (is_active,
+-- onboarding_complete, is_suspended) via PostgREST using the service_role key.
+-- Without this grant the function returns FK_INTERNAL on every request.
+--
+-- This grant was applied live during Phase 2b execution via MCP apply_migration.
+-- It is preserved here as the immutable applied-migration record.
+-- Column-level narrowing and migration-capability revocations are in 000006.
+-- See Amendment D §18.2.
+GRANT SELECT ON public.profiles TO service_role;

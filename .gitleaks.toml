@@ -1,0 +1,7 @@
+title = "WhatAndWhere gitleaks config"
+
+[allowlist]
+description = "supabase/.temp/ contains auto-generated runtime secrets, not source credentials"
+paths = [
+  '''supabase/\.temp''',
+]

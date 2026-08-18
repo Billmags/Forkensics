@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		540529953034F60A009025C7 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 540529943034F60A009025C7 /* Supabase */; };
+		540529983034F893009025C7 /* SupabaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540529973034F893009025C7 /* SupabaseConfig.swift */; };
+		540529993034F893009025C7 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540529963034F893009025C7 /* AuthService.swift */; };
 		AA0301010000000000000000 /* ForkensicsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300010000000000000000 /* ForkensicsApp.swift */; };
 		AA0301020000000000000000 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300020000000000000000 /* ContentView.swift */; };
 		AA0301030000000000000000 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300030000000000000000 /* Player.swift */; };
@@ -29,9 +32,62 @@
 		AA0301140000000000000000 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300140000000000000000 /* ConversationView.swift */; };
 		AA0301150000000000000000 /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300150000000000000000 /* LeaderboardView.swift */; };
 		AA0301160000000000000000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0300160000000000000000 /* Assets.xcassets */; };
+		AA0301170000000000000000 /* ForkensicsDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300170000000000000000 /* ForkensicsDesign.swift */; };
+		AA0301180000000000000000 /* WireframeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300180000000000000000 /* WireframeModels.swift */; };
+		AA0301190000000000000000 /* WireframeComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300190000000000000000 /* WireframeComponents.swift */; };
+		AA03011A0000000000000000 /* OnboardingWireframes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03001A0000000000000000 /* OnboardingWireframes.swift */; };
+		AA03011B0000000000000000 /* MainWireframes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03001B0000000000000000 /* MainWireframes.swift */; };
+		AA03011C0000000000000000 /* CaseWireframes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03001C0000000000000000 /* CaseWireframes.swift */; };
+		AA03011D0000000000000000 /* WireframeNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03001D0000000000000000 /* WireframeNavigation.swift */; };
+		AA03011E0000000000000000 /* PreviewGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03001E0000000000000000 /* PreviewGallery.swift */; };
+		AA03011F0000000000000000 /* GameRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03001F0000000000000000 /* GameRules.swift */; };
+		AA0301200000000000000000 /* LocalMultiplayerWireframes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300200000000000000000 /* LocalMultiplayerWireframes.swift */; };
+		AA0301210000000000000000 /* ForkensicsNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0300210000000000000000 /* ForkensicsNotificationService.swift */; };
+		BB0300010000000000000000 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0200010000000000000000 /* NotificationViewController.swift */; };
+		BB0300020000000000000000 /* ForkensicsNotificationContent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BB0100010000000000000000 /* ForkensicsNotificationContent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CC0300010000000000000000 /* ForkensicsLiveActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0200030000000000000000 /* ForkensicsLiveActivityAttributes.swift */; };
+		CC0300020000000000000000 /* ForkensicsLiveActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0200030000000000000000 /* ForkensicsLiveActivityAttributes.swift */; };
+		CC0300030000000000000000 /* ForkensicsLiveActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0200040000000000000000 /* ForkensicsLiveActivityService.swift */; };
+		CC0300040000000000000000 /* ForkensicsLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0200010000000000000000 /* ForkensicsLiveActivity.swift */; };
+		CC0300050000000000000000 /* ForkensicsLiveActivity.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CC0100010000000000000000 /* ForkensicsLiveActivity.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CC0300070000000000000000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0300160000000000000000 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BB0700010000000000000000 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA0100010000000000000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB0600010000000000000000;
+			remoteInfo = ForkensicsNotificationContent;
+		};
+		CC0700010000000000000000 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA0100010000000000000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC0600010000000000000000;
+			remoteInfo = ForkensicsLiveActivity;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BB0500040000000000000000 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BB0300020000000000000000 /* ForkensicsNotificationContent.appex in Embed App Extensions */,
+				CC0300050000000000000000 /* ForkensicsLiveActivity.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		540529963034F893009025C7 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		540529973034F893009025C7 /* SupabaseConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseConfig.swift; sourceTree = "<group>"; };
 		AA0200020000000000000000 /* Forkensics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forkensics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA0300010000000000000000 /* ForkensicsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkensicsApp.swift; sourceTree = "<group>"; };
 		AA0300020000000000000000 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,10 +111,44 @@
 		AA0300140000000000000000 /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
 		AA0300150000000000000000 /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 		AA0300160000000000000000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA0300170000000000000000 /* ForkensicsDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkensicsDesign.swift; sourceTree = "<group>"; };
+		AA0300180000000000000000 /* WireframeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WireframeModels.swift; sourceTree = "<group>"; };
+		AA0300190000000000000000 /* WireframeComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WireframeComponents.swift; sourceTree = "<group>"; };
+		AA03001A0000000000000000 /* OnboardingWireframes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingWireframes.swift; sourceTree = "<group>"; };
+		AA03001B0000000000000000 /* MainWireframes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWireframes.swift; sourceTree = "<group>"; };
+		AA03001C0000000000000000 /* CaseWireframes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseWireframes.swift; sourceTree = "<group>"; };
+		AA03001D0000000000000000 /* WireframeNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WireframeNavigation.swift; sourceTree = "<group>"; };
+		AA03001E0000000000000000 /* PreviewGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewGallery.swift; sourceTree = "<group>"; };
+		AA03001F0000000000000000 /* GameRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRules.swift; sourceTree = "<group>"; };
+		AA0300200000000000000000 /* LocalMultiplayerWireframes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalMultiplayerWireframes.swift; sourceTree = "<group>"; };
+		AA0300210000000000000000 /* ForkensicsNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkensicsNotificationService.swift; sourceTree = "<group>"; };
+		BB0100010000000000000000 /* ForkensicsNotificationContent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ForkensicsNotificationContent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB0200010000000000000000 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		BB0200020000000000000000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC0100010000000000000000 /* ForkensicsLiveActivity.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ForkensicsLiveActivity.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC0200010000000000000000 /* ForkensicsLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkensicsLiveActivity.swift; sourceTree = "<group>"; };
+		CC0200020000000000000000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC0200030000000000000000 /* ForkensicsLiveActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkensicsLiveActivityAttributes.swift; sourceTree = "<group>"; };
+		CC0200040000000000000000 /* ForkensicsLiveActivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkensicsLiveActivityService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AA0500020000000000000000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				540529953034F60A009025C7 /* Supabase in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB0500020000000000000000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC0500020000000000000000 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,6 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				AA0200020000000000000000 /* Forkensics.app */,
+				BB0100010000000000000000 /* ForkensicsNotificationContent.appex */,
+				CC0100010000000000000000 /* ForkensicsLiveActivity.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,6 +173,9 @@
 			children = (
 				AA0300010000000000000000 /* ForkensicsApp.swift */,
 				AA0300020000000000000000 /* ContentView.swift */,
+				BB0400010000000000000000 /* ForkensicsNotificationContent */,
+				CC0400010000000000000000 /* ForkensicsLiveActivity */,
+				AA04000C0000000000000000 /* Wireframes */,
 				AA0400030000000000000000 /* Models */,
 				AA0400040000000000000000 /* Services */,
 				AA0400050000000000000000 /* Views */,
@@ -107,8 +202,14 @@
 		AA0400040000000000000000 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				540529963034F893009025C7 /* AuthService.swift */,
+				540529973034F893009025C7 /* SupabaseConfig.swift */,
 				AA03000A0000000000000000 /* DataServiceProtocol.swift */,
+				AA03001F0000000000000000 /* GameRules.swift */,
 				AA03000B0000000000000000 /* MockDataService.swift */,
+				AA0300210000000000000000 /* ForkensicsNotificationService.swift */,
+				CC0200030000000000000000 /* ForkensicsLiveActivityAttributes.swift */,
+				CC0200040000000000000000 /* ForkensicsLiveActivityService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -178,6 +279,40 @@
 			path = Leaderboard;
 			sourceTree = "<group>";
 		};
+		AA04000C0000000000000000 /* Wireframes */ = {
+			isa = PBXGroup;
+			children = (
+				AA0300170000000000000000 /* ForkensicsDesign.swift */,
+				AA0300180000000000000000 /* WireframeModels.swift */,
+				AA0300190000000000000000 /* WireframeComponents.swift */,
+				AA03001A0000000000000000 /* OnboardingWireframes.swift */,
+				AA03001B0000000000000000 /* MainWireframes.swift */,
+				AA03001C0000000000000000 /* CaseWireframes.swift */,
+				AA03001D0000000000000000 /* WireframeNavigation.swift */,
+				AA03001E0000000000000000 /* PreviewGallery.swift */,
+				AA0300200000000000000000 /* LocalMultiplayerWireframes.swift */,
+			);
+			path = Wireframes;
+			sourceTree = "<group>";
+		};
+		BB0400010000000000000000 /* ForkensicsNotificationContent */ = {
+			isa = PBXGroup;
+			children = (
+				BB0200010000000000000000 /* NotificationViewController.swift */,
+				BB0200020000000000000000 /* Info.plist */,
+			);
+			path = ForkensicsNotificationContent;
+			sourceTree = SOURCE_ROOT;
+		};
+		CC0400010000000000000000 /* ForkensicsLiveActivity */ = {
+			isa = PBXGroup;
+			children = (
+				CC0200010000000000000000 /* ForkensicsLiveActivity.swift */,
+				CC0200020000000000000000 /* Info.plist */,
+			);
+			path = ForkensicsLiveActivity;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,15 +323,52 @@
 				AA0500010000000000000000 /* Sources */,
 				AA0500020000000000000000 /* Frameworks */,
 				AA0500030000000000000000 /* Resources */,
+				BB0500040000000000000000 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BB0700020000000000000000 /* PBXTargetDependency */,
+				CC0700020000000000000000 /* PBXTargetDependency */,
 			);
 			name = Forkensics;
 			productName = Forkensics;
 			productReference = AA0200020000000000000000 /* Forkensics.app */;
 			productType = "com.apple.product-type.application";
+		};
+		BB0600010000000000000000 /* ForkensicsNotificationContent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB0900010000000000000000 /* Build configuration list for PBXNativeTarget "ForkensicsNotificationContent" */;
+			buildPhases = (
+				BB0500010000000000000000 /* Sources */,
+				BB0500020000000000000000 /* Frameworks */,
+				BB0500030000000000000000 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ForkensicsNotificationContent;
+			productName = ForkensicsNotificationContent;
+			productReference = BB0100010000000000000000 /* ForkensicsNotificationContent.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		CC0600010000000000000000 /* ForkensicsLiveActivity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC0900010000000000000000 /* Build configuration list for PBXNativeTarget "ForkensicsLiveActivity" */;
+			buildPhases = (
+				CC0500010000000000000000 /* Sources */,
+				CC0500020000000000000000 /* Frameworks */,
+				CC0500030000000000000000 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ForkensicsLiveActivity;
+			productName = ForkensicsLiveActivity;
+			productReference = CC0100010000000000000000 /* ForkensicsLiveActivity.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -211,6 +383,12 @@
 					AA0200010000000000000000 = {
 						CreatedOnToolsVersion = 15.4;
 					};
+					BB0600010000000000000000 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					CC0600010000000000000000 = {
+						CreatedOnToolsVersion = 15.4;
+					};
 				};
 			};
 			buildConfigurationList = AA0601010000000000000000 /* Build configuration list for PBXProject "Forkensics" */;
@@ -221,12 +399,17 @@
 				en,
 				Base,
 			);
-			mainGroup = AA0400020000000000000000;
+			mainGroup = AA0400020000000000000000 /* Forkensics */;
+			packageReferences = (
+				540529933034F60A009025C7 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			productRefGroup = AA0400010000000000000000 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				AA0200010000000000000000 /* Forkensics */,
+				BB0600010000000000000000 /* ForkensicsNotificationContent */,
+				CC0600010000000000000000 /* ForkensicsLiveActivity */,
 			);
 		};
 /* End PBXProject section */
@@ -240,6 +423,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BB0500030000000000000000 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC0500030000000000000000 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC0300070000000000000000 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -249,6 +447,18 @@
 			files = (
 				AA0301010000000000000000 /* ForkensicsApp.swift in Sources */,
 				AA0301020000000000000000 /* ContentView.swift in Sources */,
+				AA0301170000000000000000 /* ForkensicsDesign.swift in Sources */,
+				AA0301180000000000000000 /* WireframeModels.swift in Sources */,
+				AA0301190000000000000000 /* WireframeComponents.swift in Sources */,
+				AA03011A0000000000000000 /* OnboardingWireframes.swift in Sources */,
+				AA03011B0000000000000000 /* MainWireframes.swift in Sources */,
+				AA03011C0000000000000000 /* CaseWireframes.swift in Sources */,
+				AA03011D0000000000000000 /* WireframeNavigation.swift in Sources */,
+				AA03011E0000000000000000 /* PreviewGallery.swift in Sources */,
+				AA0301200000000000000000 /* LocalMultiplayerWireframes.swift in Sources */,
+				AA0301210000000000000000 /* ForkensicsNotificationService.swift in Sources */,
+				CC0300010000000000000000 /* ForkensicsLiveActivityAttributes.swift in Sources */,
+				CC0300030000000000000000 /* ForkensicsLiveActivityService.swift in Sources */,
 				AA0301030000000000000000 /* Player.swift in Sources */,
 				AA0301040000000000000000 /* Challenge.swift in Sources */,
 				AA0301050000000000000000 /* ChallengeSecret.swift in Sources */,
@@ -257,6 +467,7 @@
 				AA0301080000000000000000 /* ScoreEvent.swift in Sources */,
 				AA0301090000000000000000 /* PostRevealContent.swift in Sources */,
 				AA03010A0000000000000000 /* DataServiceProtocol.swift in Sources */,
+				AA03011F0000000000000000 /* GameRules.swift in Sources */,
 				AA03010B0000000000000000 /* MockDataService.swift in Sources */,
 				AA03010C0000000000000000 /* ChallengeImageView.swift in Sources */,
 				AA03010D0000000000000000 /* ChallengeFeedView.swift in Sources */,
@@ -265,13 +476,45 @@
 				AA0301100000000000000000 /* GuessEntryView.swift in Sources */,
 				AA0301110000000000000000 /* PosterControlsView.swift in Sources */,
 				AA0301120000000000000000 /* CreateChallengeView.swift in Sources */,
+				540529983034F893009025C7 /* SupabaseConfig.swift in Sources */,
+				540529993034F893009025C7 /* AuthService.swift in Sources */,
 				AA0301130000000000000000 /* RevealView.swift in Sources */,
 				AA0301140000000000000000 /* ConversationView.swift in Sources */,
 				AA0301150000000000000000 /* LeaderboardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BB0500010000000000000000 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB0300010000000000000000 /* NotificationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC0500010000000000000000 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC0300020000000000000000 /* ForkensicsLiveActivityAttributes.swift in Sources */,
+				CC0300040000000000000000 /* ForkensicsLiveActivity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BB0700020000000000000000 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB0600010000000000000000 /* ForkensicsNotificationContent */;
+			targetProxy = BB0700010000000000000000 /* PBXContainerItemProxy */;
+		};
+		CC0700020000000000000000 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC0600010000000000000000 /* ForkensicsLiveActivity */;
+			targetProxy = CC0700010000000000000000 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AA0600010000000000000000 /* Debug */ = {
@@ -397,8 +640,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZMMNM2A5G7;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Take food photos to create Forkensics cases.";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -409,7 +654,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.forkensics.prototype";
+				PRODUCT_BUNDLE_IDENTIFIER = com.forkensics.prototype;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -425,8 +670,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZMMNM2A5G7;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Take food photos to create Forkensics cases.";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -437,9 +684,103 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.forkensics.prototype";
+				PRODUCT_BUNDLE_IDENTIFIER = com.forkensics.prototype;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		BB0800010000000000000000 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZMMNM2A5G7;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ForkensicsNotificationContent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forkensics.prototype.NotificationContent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		BB0800020000000000000000 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZMMNM2A5G7;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ForkensicsNotificationContent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forkensics.prototype.NotificationContent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		CC0800010000000000000000 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZMMNM2A5G7;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ForkensicsLiveActivity/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forkensics.prototype.LiveActivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		CC0800020000000000000000 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZMMNM2A5G7;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ForkensicsLiveActivity/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forkensics.prototype.LiveActivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -467,8 +808,46 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		BB0900010000000000000000 /* Build configuration list for PBXNativeTarget "ForkensicsNotificationContent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB0800010000000000000000 /* Debug */,
+				BB0800020000000000000000 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC0900010000000000000000 /* Build configuration list for PBXNativeTarget "ForkensicsLiveActivity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC0800010000000000000000 /* Debug */,
+				CC0800020000000000000000 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		540529933034F60A009025C7 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+			traits = (
+			);
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		540529943034F60A009025C7 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 540529933034F60A009025C7 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AA0100010000000000000000 /* Project object */;
 }

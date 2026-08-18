@@ -73,9 +73,26 @@ No profile write should precede a valid Supabase session.
 - Claude will flag any iOS 26-specific API used without an iOS 18 fallback at implementation time.
 - Pilot device inventory required before implementation begins.
 
+## Image transform architecture — CONFIRMED 2026-08-16
+
+Server-side re-encoding is handled by a **Cloudflare Worker + R2 + Images Binding** pipeline. Gate 2B CF spike (Rev 10) passed all probes on 2026-08-16.
+
+- Upload target: private Cloudflare R2 bucket (`originals/` prefix).
+- Transform: Cloudflare Worker calls `IMAGES.input().transform().output(format:"image/webp", anim:false)`. Worker enforces: 10 MB byte gate, 15.5 MP pixel gate, JPEG/WebP formats only, bounded 5 MB output stream.
+- Metadata stripping: confirmed — Cloudflare Images strips all EXIF/XMP/ICC/GPS from output WebP.
+- Write-back: transformed display copy stored at `display/{basename}.webp` in R2.
+- Auth boundary: worker requires `Authorization: Bearer {SPIKE_SECRET}` — production will use Cloudflare service token or HMAC-SHA256 (OQ-3, pending decision).
+- CPU budget: Free plan 10 ms limit; CF-P-9 returned 200 OK (Error 1102 would have fired if exceeded). Metric was INCONCLUSIVE due to Free plan analytics lag.
+- Supabase `upload-complete` Edge Function calls the Cloudflare Worker after upload; Cloudflare is not a Supabase component.
+
+**Design decisions (confirmed 2026-08-16):**
+- Upload path: `upload-authorize` returns a 5-minute pre-signed R2 PUT URL with server-generated object key and scoped `Content-Type`. Client uploads directly to R2. URL is ephemeral and never stored.
+- Display key: `display/{media_id}.webp` — derived from the media UUID. Idempotent, no double extension, no additional database field.
+- Worker auth: Cloudflare Access service token. `upload-complete` sends `CF-Access-Client-Id` and `CF-Access-Client-Secret` headers (stored as Supabase secrets). No custom HMAC code.
+- Pixel gates: reject when `width > 8192`, `height > 8192`, or `width × height > 15,500,000`. All three checked independently; any failure returns 422.
+
 ## Open architecture decisions
 
-- Deno/WASM image processing library for server-side re-encoding: to be confirmed before media step is approved.
 - Push notification delivery details: Edge Function triggers to APNs directly vs. third-party service.
 - AI provider for fuzzy matching and dish suggestions: deferred.
 

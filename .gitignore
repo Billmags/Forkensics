@@ -6,6 +6,8 @@ supabase/.branches/
 .env
 .env.*
 *.env
+# Committed example is exempt
+!supabase/functions/.env.example
 *.pem
 *.key
 secrets/

@@ -1,7 +1,7 @@
 import Foundation
 
 /// Immutable record of points awarded for one player in one race of one challenge.
-/// Formula: points = effectiveEligibleCount - rank + 1 (minimum 1).
+/// Current ladder: first 100, second 80, third 60, fourth and later zero.
 /// Scores are never silently overwritten; corrections produce a new event linked to CorrectionEvent.
 struct ScoreEvent: Identifiable {
     let id: UUID

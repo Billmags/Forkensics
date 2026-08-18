@@ -1,0 +1,13 @@
+HTTP/1.1 200 OK
+Content-Length: 6012
+Date: Sun, 16 Aug 2026 11:40:28 GMT
+Content-Type: image/webp
+Server: cloudflare
+CF-Ray: a2c02a0f9f7d347f-MIA
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=i3oURFMzWjGhM7X%2Bx%2B5klCmttIThnp%2FtfWGDH%2BEiC3SQpC0iTgTRq3lOLuNHWHh%2BmSR98BXScJVDnZDw4V%2B7hLQ3V8sGl5WoX4GYQ%2BeQlgZS1E10zvUh3ttW1uHfE5xBP98iF15d2GmYjvbB6h7bBkDFxb1kSAABcjCpjNg0"}]}
+X-Forkensics-Display-Key: display/fixture-static-icc-xmp.webp.webp
+X-Forkensics-SHA256: 49363c3e606cc95ed7a0e83fb0609b6f23e01180d80d7c2d4783a773a43b8eec
+X-Forkensics-Size: 6012
+alt-svc: h3=":443"; ma=86400
+

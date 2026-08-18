@@ -1,0 +1,14 @@
+name = "forkensics-image-spike"
+main = "src/index.ts"
+compatibility_date = "2026-08-15"
+
+[images]
+binding = "IMAGES"
+
+[[r2_buckets]]
+binding             = "BUCKET"
+bucket_name         = "forkensics-dev-spike"
+preview_bucket_name = "forkensics-dev-spike"
+
+[secrets]
+required = ["SPIKE_SECRET"]

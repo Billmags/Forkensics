@@ -1,0 +1,18 @@
+[ExifTool]      ExifToolVersion                 : 13.55
+[System]        FileName                        : cf_p4_jpeg_output.webp
+[System]        Directory                       : .
+[System]        FileSize                        : 7.3 kB
+[System]        FileModifyDate                  : 2026:08:16 07:40:27-04:00
+[System]        FileAccessDate                  : 2026:08:16 07:40:28-04:00
+[System]        FileInodeChangeDate             : 2026:08:16 07:40:27-04:00
+[System]        FilePermissions                 : -rw-r--r--
+[File]          FileType                        : WEBP
+[File]          FileTypeExtension               : webp
+[File]          MIMEType                        : image/webp
+[RIFF]          VP8Version                      : 0 (bicubic reconstruction, normal loop)
+[RIFF]          ImageWidth                      : 1200
+[RIFF]          HorizontalScale                 : 0
+[RIFF]          ImageHeight                     : 900
+[RIFF]          VerticalScale                   : 0
+[Composite]     ImageSize                       : 1200x900
+[Composite]     Megapixels                      : 1.1

@@ -1,0 +1,15 @@
+{
+  "name": "forkensics-image-transform",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "types": "wrangler types",
+    "typecheck": "wrangler types && tsc --noEmit",
+    "deploy:dev": "wrangler deploy",
+    "deploy:prod": "wrangler deploy --env production"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "wrangler": "^4.0.0"
+  }
+}
