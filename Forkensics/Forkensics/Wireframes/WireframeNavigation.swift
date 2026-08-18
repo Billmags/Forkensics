@@ -132,9 +132,6 @@ struct ForkensicsMainShell: View {
         .task {
             await refreshFromSupabase()
         }
-        .onChange(of: challengeService.cases) { _, newCases in
-            challengeStore.loadFromSupabase(newCases)
-        }
         .onReceive(NotificationCenter.default.publisher(for: .forkensicsOpenCase)) { notification in
             guard let caseID = notification.userInfo?[ForkensicsNotificationKeys.caseID] as? String else {
                 return
@@ -451,6 +448,11 @@ struct ForkensicsMainShell: View {
         guard let session = authService.session else { return }
         challengeStore.setSupabaseUserID(session.user.id.uuidString)
         await challengeService.fetch(using: authService.client)
+        // Only sync on success — error leaves the existing feed unchanged.
+        // An empty successful result (no cases yet) correctly clears the feed.
+        if challengeService.error == nil {
+            challengeStore.loadFromSupabase(challengeService.cases)
+        }
     }
 
     private func showLockedIn() {
