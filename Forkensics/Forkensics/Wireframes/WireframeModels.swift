@@ -324,6 +324,10 @@ final class WireframeTableStore: ObservableObject {
 enum WireframePlayerDirectory {
     static let maggie = WireframePlayer(id: "maggie", name: "Maggie Schroeder", handle: "@maggie.s")
 
+    /// Neutral fallback for players whose real profile hasn't been fetched yet
+    /// (e.g. a real Supabase UUID not yet resolved to a display name).
+    static let unknown = WireframePlayer(id: "", name: "Unknown Detective", handle: "@")
+
     static let tableNames = ["Schroeder Table", "Dinner Friends", "Food Detectives"]
 
     static let players: [WireframePlayer] = [
@@ -360,7 +364,7 @@ enum WireframePlayerDirectory {
     ]
 
     static func player(id: String) -> WireframePlayer {
-        players.first(where: { $0.id == id }) ?? maggie
+        players.first(where: { $0.id == id }) ?? unknown
     }
 
     static func players(in tableName: String) -> [WireframePlayer] {

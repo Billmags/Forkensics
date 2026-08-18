@@ -110,7 +110,12 @@ final class ChallengeService: ObservableObject {
             clue: "",                                   // from hints table — wired in a future step
             tableNames: [row.groups?.name ?? "Table"],
             durationHours: durationHours,
-            posterPlayerID: row.poster_id.uuidString   // real UUID; WireframePlayerDirectory falls back gracefully
+            posterPlayerID: row.poster_id.uuidString   // real UUID; WireframePlayerDirectory falls
+                                                        // back to "Unknown Detective" for unknown IDs
         )
+        // Note: profiles(display_name) is fetched in the join and available as
+        // row.profiles?.display_name. Wiring it to the feed row label requires
+        // extending WireframePostedCase with a posterDisplayName field — deferred
+        // to a future step alongside the full profile data path.
     }
 }
